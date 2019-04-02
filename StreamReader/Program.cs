@@ -20,7 +20,9 @@ namespace Streams
             getAllFiles();
             Console.WriteLine();
             getDirectories();
-            
+            getFileNames();
+
+
                 Console.ReadKey();
 
         }
@@ -85,6 +87,16 @@ namespace Streams
             string[] directories = Directory.GetDirectories(path);
 
             foreach (var item in directories)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        static void getFileNames()
+        {
+
+            var filenames = Directory.GetFiles(path).Select(Path.GetFileName);
+            foreach (var item in filenames)
             {
                 Console.WriteLine(item);
             }
