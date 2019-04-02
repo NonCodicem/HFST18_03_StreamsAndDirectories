@@ -11,6 +11,7 @@ namespace Streams
     {
         static string filePath;
         static string path;
+        static string wijzigingVanuitGithub
 
         static void Main(string[] args)
         {
